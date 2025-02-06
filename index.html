@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Recipe App to manage and search your favorite recipes.">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Recipe Web App</h1>
+    </nav>
+  </header>
+  <main class="main-container">
+    <!-- Add recipes form -->
+    <section class="left-column" aria-labelledby="add-recipe-heading">
+      <h2 id="add-recipe-heading">Add Recipe</h2>
+      <form id="recipe-form" aria-label="Add a new recipe">
+        <div class="form-group">
+          <label for="recipe-name">Name:</label>
+          <input type="text" id="recipe-name" placeholder="Enter recipe name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="recipe-ingredients">Ingredients:</label>
+          <textarea id="recipe-ingredients" rows="5" placeholder="List ingredients" required
+            aria-required="true"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="recipe-method">Method:</label>
+          <textarea id="recipe-method" rows="5" placeholder="Describe the method" required
+            aria-required="true"></textarea>
+        </div>
+
+        <!-- Image Upload Section -->
+        <div class="file-upload">
+          <label class="file-upload-label" for="file-upload">Choose an Image</label>
+          <input type="file" id="file-upload" accept="image/*" onchange="previewImage(event)">
+        </div>
+
+        <!-- Image Preview Area -->
+        <div id="image-preview-area" class="image-preview">
+          <!-- Image preview will be displayed here -->
+        </div>
+
+        <button type="submit">Add Recipe</button>
+      </form>
+    </section>
+
+    <!-- Search bar/view recipes list -->
+    <section class="right-column" aria-labelledby="recipes-list-heading">
+      <h2 id="recipes-list-heading">Recipes List</h2>
+      <div id="search-section">
+        <label for="search-box">Search:</label>
+        <input type="text" id="search-box" placeholder="Search recipes..." aria-label="Search recipes">
+        <label for="filter-ingredients">Filter by Ingredients:</label>
+        <input type="text" id="filter-ingredients" placeholder="Enter ingredients...">
+      </div>
+      <div id="recipe-list" aria-live="polite">
+        <!-- Recipes will be dynamically added here -->
+      </div>
+      <div id="no-recipes" class="hidden" aria-live="polite">You have no recipes.</div>
+    </section>
+  </main>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
