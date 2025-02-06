@@ -17,3 +17,5 @@ JavaScript: For adding interactivity, handling form submissions, and managing re
 Local Storage: To save recipes in the browser, allowing users to access their saved recipes even after refreshing the page.
 
 This project is a great way to learn about web development and how to create a functional application using these core web technologies.
+
+#OUTPUT- ![Image](https://github.com/user-attachments/assets/798fd372-88f5-4d81-bb51-746422b6b602)
